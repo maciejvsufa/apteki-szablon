@@ -1,0 +1,15 @@
+
+html,body{overflow-x:clip}
+img,iframe{max-width:100%}
+.demo-bar{background:#15201a;color:#f6f1e8;font-weight:500}
+.contact .wrap{grid-template-columns:1fr;max-width:820px}
+.hero-bg{background-image:url(zdjecia/wnetrze.webp)!important;background-position:center center!important;background-size:cover!important}
+.hero h1,.page-hero h1{overflow-wrap:anywhere}
+.btn,.phone-card,.burger{min-height:44px}
+.svc img{object-fit:cover;object-position:center}
+.svc img[src*="szczepienia"]{object-position:64% 40%}
+@media (max-width:560px){
+  .hero-bg{background-image:url(zdjecia/wnetrze-m.webp)!important;background-position:center center!important}
+  .hero{min-height:640px}
+  .hero .wrap{padding-top:300px}
+}

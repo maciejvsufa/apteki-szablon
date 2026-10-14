@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Oferta — Apteka</title>
+<style>
+@font-face{font-family:"Manrope";font-style:normal;font-weight:300 800;font-display:swap;src:url(wz/assets/fonts/manrope-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:300 800;font-display:swap;src:url(wz/assets/fonts/manrope-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{color-scheme:light;--bg:#fff;--rama:#F3F3F3;--ink:#0F0F0F;--soft:#5E5E5E;--faint:#8C8C8C;--line:#E6E6E6;--accent:#FF5A1F;--cien:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);--font:"Manrope",system-ui,sans-serif}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{overflow-x:clip}body{margin:0;background:#fff;color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55}
+h1,h2{margin:0;font-weight:600;letter-spacing:-.035em;text-wrap:balance}h1{font-size:clamp(1.8rem,7vw,3.4rem);line-height:1.05}h2{font-size:clamp(1.35rem,4vw,1.7rem)}
+p{margin:0}button,input,select{font:inherit;color:inherit}img{max-width:100%;height:auto}
+.iskra{display:inline-block;width:.75rem;height:.75rem;background:var(--accent);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);margin-right:.4rem;vertical-align:-.05em}
+.ogloszenie{background:#000;color:#fff;text-align:center;font-size:.86rem;padding:.6rem 16px}
+.nav{position:sticky;top:0;z-index:8;background:rgba(255,255,255,.9);border-bottom:1px solid #EFEFEF;backdrop-filter:blur(14px)}
+.nav-in{max-width:76rem;margin:0 auto;padding:.75rem 1.1rem;display:flex;align-items:center;gap:.6rem}
+.logo{display:inline-flex;align-items:center;gap:.45rem;font-weight:600;letter-spacing:-.02em;min-width:0}
+.logo-znak{width:1.05rem;height:.85rem;background:var(--accent);border-radius:2px 4px 3px 3px;position:relative;flex:none}
+.logo-znak::before{content:"";position:absolute;left:0;top:-3px;width:45%;height:4px;background:var(--accent);border-radius:2px 2px 0 0}
+.logo b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hero{max-width:46rem;margin:0 auto;padding:clamp(2.2rem,7vw,4.5rem) 1.1rem 1rem;text-align:center}
+.hero p{color:var(--soft);margin-top:.85rem}
+.film{max-width:76rem;margin:1rem auto 0;padding:0 1.1rem}
+.film-kadr{min-height:220px;border-radius:22px;background:#111 center/cover;display:flex;align-items:flex-end;color:#fff;position:relative;overflow:hidden}
+.film-kadr::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.film-kadr div{position:relative;z-index:1;padding:1.2rem 1.2rem}
+.film-kadr b,.film-kadr span{display:block}
+.film-kadr span{color:rgba(255,255,255,.82)}
+.sekcja{max-width:76rem;margin:0 auto;padding:2rem 1.1rem 1rem}
+.rama{background:var(--rama);border-radius:22px;padding:.65rem}
+.umowy{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.umowa{text-align:left;border:0;background:#fff;border-radius:14px;padding:1rem 1.05rem;cursor:pointer;min-height:5.2rem}
+.umowa b{display:block;font-size:1.25rem}
+.umowa span{color:var(--soft);font-size:.92rem}
+.umowa.on{background:var(--ink);color:#fff}
+.umowa.on span{color:rgba(255,255,255,.75)}
+.opis{margin:.85rem 0 0;color:var(--soft)}
+.uklad{display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,22rem);gap:1rem;align-items:start;margin-top:1rem}
+.modul{display:flex;justify-content:space-between;align-items:center;gap:.8rem;background:#fff;border-radius:14px;padding:.95rem 1rem;margin:.4rem 0}
+.modul small{display:block;color:var(--soft);font-weight:400}
+.modul select,.modul input[type=number]{font-size:16px;max-width:100%;border:1px solid var(--line);border-radius:9px;padding:.45rem .5rem;background:#fff}
+.koszyk{position:sticky;top:4.6rem;background:#fff;border-radius:16px;padding:1.05rem;box-shadow:var(--cien)}
+.suma b{display:block;font-size:clamp(1.35rem,4vw,1.8rem);letter-spacing:-.03em;margin:.25rem 0 .7rem}
+.btn{width:100%;border:0;border-radius:10px;background:var(--ink);color:#fff;padding:.85rem 1rem;cursor:pointer;font-weight:600;min-height:48px}
+.mies{display:flex;gap:.4rem;margin:.35rem .2rem .2rem}
+.mies button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:.5rem .7rem;cursor:pointer;min-height:44px}
+.mies button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+#po{min-height:1.2rem;margin-top:.55rem;color:var(--soft)}
+.stopka{max-width:76rem;margin:0 auto;padding:1rem 1.1rem 2rem;color:var(--soft);font-size:.85rem}
+.mini{display:none}
+@media(max-width:800px){
+  .uklad{grid-template-columns:1fr}
+  .umowa{padding:.8rem .7rem;min-height:4.8rem}
+  .umowa b{font-size:1.05rem}
+  .umowa span{font-size:.78rem}
+  .koszyk{position:static}
+  .modul{align-items:flex-start;flex-wrap:wrap}
+  body{padding-bottom:calc(4.6rem + env(safe-area-inset-bottom,0px))}
+  .mini{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:.6rem;align-items:center;padding:.55rem .8rem calc(.55rem + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.94);border-top:1px solid var(--line);backdrop-filter:blur(12px)}
+  .mini a{flex:1;min-width:0;text-decoration:none;color:inherit}
+  .mini b{display:block;font-size:1rem;letter-spacing:-.02em}
+  .mini small{color:var(--soft)}
+  .mini .btn{width:auto;padding:.7rem .9rem}
+  .hero{padding:1.15rem 1.1rem .35rem}
+  .film{margin-top:.55rem}
+  .film-kadr{min-height:132px}
+  .sekcja{padding-top:1.1rem}
+}
+</style>
+</head><body>
+<div class="ogloszenie">Oferta dla właściciela · Apteka, Chotomów</div>
+<header class="nav"><div class="nav-in"><span class="logo"><span class="logo-znak" aria-hidden="true"></span><b>Oferta · Apteka</b></span></div></header>
+<main>
+<section class="hero">
+  <p class="eyebrow"><span class="iskra" aria-hidden="true"></span>Dla Apteka</p>
+  <h1>Sam dokładasz, co chcesz. Na dole jest cena.</h1>
+  <p>Wybierz umowę. Potem dołóż albo zdejmij moduły. Cena liczy się od razu.</p>
+</section>
+<div class="film"><div class="film-kadr" style="background-image:url(wz/zdjecia/wnetrze-m.webp)"><div><b>Film o stronie i o telefonie</b><span>Wejdzie w to miejsce, zanim kartka pójdzie do druku.</span></div></div></div>
+<section class="sekcja" id="umowa">
+  <p class="eyebrow"><span class="iskra" aria-hidden="true"></span>Umowa</p>
+  <h2>Dwa warianty, obok siebie</h2>
+  <div class="rama" style="margin-top:1rem">
+  <div class="umowy">
+    <button type="button" class="umowa on" id="rozwoj"><b>Rozwój</b><span>Czas nieokreślony, bez kary</span></button>
+    <button type="button" class="umowa" id="spokoj"><b>Spokój</b><span>12 albo 24 miesiące</span></button>
+  </div>
+  </div>
+  <p class="opis" id="opis">Czas nieokreślony, bez kary. Asistel jest w umowie na 24 miesiące.</p>
+  <div class="uklad">
+    <div class="rama">
+      <label class="modul"><span><b>Strona, budowa</b><small>2 apteki w tej cenie</small></span><input type="checkbox" id="budowa" checked></label>
+      <label class="modul"><span><b>Opieka</b><small>co miesiąc</small></span><input type="checkbox" id="opieka" checked></label>
+      <label class="modul"><span><b>Wizytówka Google</b><small id="wiz-opis">250 zł, gdy jest dostęp do wizytówki</small></span><span><input type="checkbox" id="wizytowka"> <select id="wiz-tryb"><option value="250">mamy dostęp, 250 zł</option><option value="350">zakładacie albo przejmujecie, 350 zł</option></select></span></label>
+      <label class="modul"><span><b>Artykuły</b><small>180 zł za sztukę</small></span><input id="artykuly" type="number" min="0" max="12" value="0"></label>
+      <label class="modul"><span><b>Asistel</b><small id="asistel-opis">dostępny w umowie na 24 miesiące</small></span><input type="checkbox" id="asistel"></label>
+      <div class="mies" id="miesiace" hidden>
+        <button type="button" id="m12">12 miesięcy</button>
+        <button type="button" class="on" id="m24">24 miesiące</button>
+      </div>
+    </div>
+    <aside class="koszyk" id="koszyk">
+      <span>Na dole jest cena</span>
+      <div class="suma"><b id="suma">0 zł</b><span id="suma-opis"></span></div>
+      <button class="btn" type="button" id="akceptuj">Akceptuję tę cenę</button>
+      <p id="po"></p>
+    </aside>
+  </div>
+</section>
+</main>
+<p class="stopka">Akceptacja zapisuje zestaw, kwotę i godzinę. To jeszcze nie umowa. Kara za wcześniejsze zejście ze Spokoju — brzmienie ustala zespół przed podpisem. Ceny da się zmienić przed drukiem.</p>
+<div class="mini"><a href="#koszyk"><b id="suma-mini">0 zł</b><small id="suma-opis-mini"></small></a><button class="btn" type="button" id="akceptuj-mini">Akceptuję</button></div>
+<script>
+const D = {"kod": "2UBS24", "budowa": 5400, "opieka": 499, "wizytowka": 250, "wizytowkaNowa": 350, "artykul": 180, "asistel": 349, "start": 499};
+const z = new URLSearchParams(location.search).get('z') || '';
+let umowa = 'rozwoj';
+let miesiace = 24;
+const q = (id) => document.getElementById(id);
+function zaznacz(typ, detal) {
+  fetch('/zdarzenie', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({kod:D.kod, z, typ, detal})});
+}
+function policz() {
+  let raz = 0, mies = 0, sklad = [];
+  if (q('budowa').checked) { raz += D.budowa; sklad.push('budowa'); }
+  if (q('opieka').checked) { mies += D.opieka; sklad.push('opieka'); }
+  if (q('wizytowka').checked) {
+    const w = Number(q('wiz-tryb').value);
+    raz += w; sklad.push('wizytowka'+w);
+  }
+  const n = Number(q('artykuly').value || 0);
+  raz += n * D.artykul; if (n) sklad.push('artykuly'+n);
+  const as = q('asistel');
+  if (umowa === 'spokoj') as.checked = true;
+  if (as.checked && umowa === 'spokoj') { raz += D.start; mies += D.asistel; sklad.push('asistel'); }
+  const tekst = raz.toLocaleString('pl-PL') + ' zł na start i ' + mies.toLocaleString('pl-PL') + ' zł miesięcznie';
+  const opis = umowa === 'rozwoj' ? 'Rozwój' : ('Spokój, ' + miesiace + ' miesięcy');
+  q('suma').textContent = tekst;
+  q('suma-opis').textContent = opis;
+  q('suma-mini').textContent = tekst;
+  q('suma-opis-mini').textContent = opis;
+  return [umowa, miesiace, raz, mies, sklad.join('+')].join('|');
+}
+q('rozwoj').onclick = () => {
+  umowa = 'rozwoj';
+  q('rozwoj').classList.add('on'); q('spokoj').classList.remove('on');
+  q('opis').textContent = 'Czas nieokreślony, bez kary. Asistel jest w umowie na 24 miesiące.';
+  q('asistel').checked = false;
+  q('asistel-opis').textContent = 'dostępny w umowie na 24 miesiące';
+  q('miesiace').hidden = true;
+  policz();
+};
+q('spokoj').onclick = () => {
+  umowa = 'spokoj';
+  q('spokoj').classList.add('on'); q('rozwoj').classList.remove('on');
+  q('opis').textContent = '12 albo 24 miesiące. Karę za wcześniejsze zejście dopisze zespół przed umową.';
+  q('asistel').checked = true;
+  q('asistel-opis').textContent = D.asistel + ' zł miesięcznie i ' + D.start + ' zł na start. Minimum 24 miesiące.';
+  q('miesiace').hidden = false;
+  policz();
+};
+q('m12').onclick = () => { miesiace = 12; q('m12').classList.add('on'); q('m24').classList.remove('on'); policz(); };
+q('m24').onclick = () => { miesiace = 24; q('m24').classList.add('on'); q('m12').classList.remove('on'); policz(); };
+document.querySelectorAll('input,select').forEach(el => el.addEventListener('change', policz));
+function akceptuj() {
+  const detal = policz();
+  zaznacz('akceptacja', detal);
+  q('po').textContent = 'Zapisane: ' + q('suma').textContent + '. Oddzwonimy, jeśli numer jest na kartce.';
+}
+q('akceptuj').onclick = akceptuj;
+q('akceptuj-mini').onclick = akceptuj;
+policz();
+</script>
+</body></html>
